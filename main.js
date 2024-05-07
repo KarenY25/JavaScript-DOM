@@ -2,16 +2,20 @@
 // OBTENER EL POR ID
 //
 
-const div1 = document.getElementById('div1-1');
-console.log(div1);
+const divOne = document.getElementById("div1");
+console.log(divOne);
 
-const divCollection = document.getElementsTagName('div');
-console.log(divCollection);
+const divCollec = document.getElementsByTagName("div");
+console.log(divCollec);
 
-const p = document.getElementById('p1');
-const usernameInput = document.getElementsByName('username');
-const usernameInput = usernameInput[0];
+const p = document.getElementById("p-element");
+const userNumberInputs = document.getElementsByName("userNumber");
+const userNumberInput = userNumberInputs[0];
 
-console.log(p, usernameInput);
+console.log(p, userNumberInput);
 
-usernameInput.addEventListener('input',(event)) => {
+// Events
+userNumberInput.addEventListener("input", (event) => {
+    console.log(event.target.value);
+    p.innerText = event.target.value;
+});
